@@ -6,7 +6,7 @@ import cv2
 from ultralytics import YOLO
 
 # Cargar el modelo YOLOv8 pre-entrenado
-model = YOLO('yolov8.pt')  # Versión nano (más ligera y rápida)
+model = YOLO('yolov8x.pt').to('cuda')  # Versión nano (más ligera y rápida)
 # Alternativas: 'yolov8s.pt' (small), 'yolov8m.pt' (medium), 'yolov8l.pt' (large), 'yolov8x.pt' (extra large)
 
 # Inicializar la cámara (0 es generalmente la cámara principal)
@@ -31,7 +31,9 @@ while True:
         break
     
     # Procesar el frame con YOLO
-    results = model(frame)
+    results = model(frame, device='cuda')
+    
+
     
     # Visualizar los resultados en el frame
     annotated_frame = results[0].plot()
