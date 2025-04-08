@@ -1,8 +1,12 @@
+# Instalar python, reiniciar para actualizar PATH
+# installar librerias "pip install ultralytics" 
+# desinstalar pythorch "pip uninstall torch torchvision torchaudio -y"   
+# revisar version de cuda e intsalat pythorch "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121   "
 import cv2
 from ultralytics import YOLO
 
 # Cargar el modelo YOLOv8 pre-entrenado
-model = YOLO('yolov8m.pt')  # Versión nano (más ligera y rápida)
+model = YOLO('yolov8.pt')  # Versión nano (más ligera y rápida)
 # Alternativas: 'yolov8s.pt' (small), 'yolov8m.pt' (medium), 'yolov8l.pt' (large), 'yolov8x.pt' (extra large)
 
 # Inicializar la cámara (0 es generalmente la cámara principal)
