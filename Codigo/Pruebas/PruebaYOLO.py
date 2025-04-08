@@ -6,8 +6,8 @@ import cv2
 from ultralytics import YOLO
 
 # Cargar el modelo YOLOv8 pre-entrenado
-model = YOLO('yolov8x.pt').to('cuda')  # Versión nano (más ligera y rápida)
-# Alternativas: 'yolov8s.pt' (small), 'yolov8m.pt' (medium), 'yolov8l.pt' (large), 'yolov8x.pt' (extra large)
+model = YOLO('yolov8x.pt').to('cuda') # Cambia 'yolov8x.pt' por el modelo que desees usar
+# Alternativas: 'yolov8n.pt' (nano), 'yolov8s.pt' (small), 'yolov8m.pt' (medium), 'yolov8l.pt' (large), 'yolov8x.pt' (extra large)
 
 # Inicializar la cámara (0 es generalmente la cámara principal)
 cap = cv2.VideoCapture(0)
