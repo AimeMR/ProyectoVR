@@ -24,3 +24,108 @@ yolov8x-cls.pt
 
 #Ignore config files
 /.vs
+
+# =========================================================
+# IGNORAR ARCHIVOS Y DIRECTORIOS GENERALES / DE SISTEMA OPERATIVO
+# =========================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio (general)
+.vs/                   # Carpeta de soluciones de VS (oculta, muy importante ignorar)
+*.suo                  # Archivo de opciones de usuario de solución
+*.user                 # Archivo de opciones de usuario de proyecto
+*.sln.docstates        # Estado de documentos de la solución
+*.vsp                  # Archivos de perfil de rendimiento
+*.webtest              # Archivos de pruebas web
+*.testsettings         # Archivos de configuración de pruebas
+*.loadtest             # Archivos de pruebas de carga
+*.vspscc
+*.vssscc
+*.hgtags
+
+# Visual Studio Code
+.vscode/               # Configuración de VS Code (a menudo específica del usuario)
+*.code-workspace       # Archivos de espacio de trabajo de VS Code
+
+# =========================================================
+# IGNORAR ARCHIVOS ESPECÍFICOS DE LENGUAJES / FRAMEWORKS
+# =========================================================
+
+# C# / .NET (para tu proyecto Servidor C#)
+# Se asume que tu Servidor C# estará en Codigo/Servidor/MiServidorWebSocket/
+# y que ya tendrá su propio .gitignore si usas dotnet new.
+# Pero es bueno tener estas reglas globales también.
+[Bb]in/                 # Binarios compilados
+[Oo]bj/                 # Archivos de objeto y intermedios
+*.pdb                   # Archivos de base de datos de programa (depuración)
+*.exe                   # Ejecutables
+*.dll                   # Librerías dinámicas
+*.aps                   # Caché de recursos (C++)
+*.ncb                   # Base de datos de exploración (C++)
+*.opensdf
+*.sdf                   # Archivos de base de datos de IntelliSense (C++)
+ipch/                   # Archivos de encabezados precompilados (C++)
+*.exp
+*.lib
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.pgc
+*.pgd
+*.psmdcp
+*.VC.db
+*.VC.VC.opendb
+*.log
+*.bak
+*.ide
+*.mode
+*.session
+*.tmp
+*.vsperffile
+*.vstmp
+
+# Archivos de Nuget
+*.nupkg                 # Paquetes NuGet
+# Ignorar directorios de paquetes restaurados si están en la raíz del repo (menos común ahora)
+# packages/
+
+# Python (para tu módulo AI)
+# La carpeta venv/ y __pycache__/ deben estar en el .gitignore específico de AI_Module.
+# Estas reglas son solo un recordatorio o para archivos sueltos de Python en la raíz.
+*.py[co]                # Archivos compilados de Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# =========================================================
+# OTROS GENERALES (Logs, etc.)
+# =========================================================
+*.log                   # Archivos de log
+*.bak                   # Archivos de respaldo
+*.swp                   # Archivos de swap de editores (Vim)
+*.swo                   # Archivos de swap de editores (Vim)
+*~                      # Archivos de respaldo de editores
+
+# Directorios de artefactos de compilación (si generas en la raíz)
+build/
+dist/
+
+# Dependencias (si se instalan en la raíz del repo, lo cual no es ideal)
+node_modules/           # Si por alguna razón usas Node.js en la raíz
