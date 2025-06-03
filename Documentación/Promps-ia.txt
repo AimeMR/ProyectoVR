@@ -1,0 +1,19 @@
+Quiero que traces un step-to-step del sigiente proyecto:
+
+El proyecto consta de tres partes
+1- El servidor (ahora mismo un laptop) donde se ejecutan los algoritmos de ia, esta la base de datos y
+2-Una aplicación (idea de que sea desarrollada en Unity) para gafas VR (Primero siendo usada para telefono android y despues pensada para VR) donde se captura la camara y es enviada la imagen en vivo al servidor para que la procese y develve una imagen que es pintada en el suelo.
+3-Un robot (actualmente no existente) que recorre una ruta (la que es pintada en el dispositivo movil o gafas vr) que es el pasillo de un hospital, este va recorriendo la sala de los pacientes y busca una mesa cerca del paciente para dejar la medicina (aprender el modelo de la silla, no esta en los datos bases de YOLO8)
+
+taza los pasos a seguir para
+
+1-conectar las gafas/telefono al servidor para transmision bicanal con web socket
+2-aplicacion para la captacion de imagenes que sea enviado al servidor
+2.1- una aplicacion para telefono
+2.2- una aplicacion para el robot
+3- procesamiento del video recibido con YOLO8 realizando comparacion del grafo de las personas en el video con unos grafos por determinar (considerar también el aprender como establecer esos grafos)
+4- procesar el video enviado por el robot para observar todos los objetos de la sala y encontrar donde esta la mesa objetivo
+
+considera que se busca optimizar lo maximo posible, asi que la gestion de la ia es en python pero la gestion de la data en c++, pero comenta si hay mejores opciones
+
+comenta que mas se podria considerar
